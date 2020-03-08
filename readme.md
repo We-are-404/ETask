@@ -1,37 +1,7 @@
-登录：
+# 更新日志
 
-```
-后端返回：
-	{
-		name,  // 用户姓名
-		company, // 用户公司
-		task: // 与该用户挂钩的二维数组， eg： task:[[taskId, taskName],[taskId, taskName]……]
-	}
-
-```
-
-
-
-
-
-
-
-切换到协作者单聊列表：
-
-```
-前端发送：
-
-	{
-		username // 用户手机号
-		
-	}
-
-后端返回：
-	{
-		friend // 与该用户挂钩的二维数组，存放他的好友列表信息eg: 
-		// friend:[[friendName, friendCompany],[friendName,friendCompany],[friendName,friendCompany]......]
-	}
-
-
-```
+## 2020,3,8 第二次更新  (branch -> 2020_3_8_2)
+美化了任务列表，添加了绿色背景，做了任务项的白色乳化。
+添加了悬浮闪光特效，但为进行防抖节流处理，所以会多次反复触发，不优雅、不美观。
+会在 JS+JQ 的版本最后进行防抖节流优化
 
