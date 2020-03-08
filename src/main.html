@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+
+    <!-- 将所有的节点都挂载在 root 节点上，方便后期扩展及模块处理 -->
+    <div id="root">
+        <!-- 用户侧边栏 -->
+        <div class="switcher">
+
+            <!-- 用户侧边栏顶部，用于展示用户头像 -->
+            <div class="switcher-header">
+                <div class="switcher-header-logoImg"></div>
+            </div>
+
+            <!-- 用户侧边栏主要部分，用于进行功能页内容切换控制 -->
+            <div class="switcher-main">
+                <div class="switcher-main-item item-task">
+                    <div class="switcher-main-item-icon"><i class="mdui-icon material-icons">&#xe39f;</i></div>
+                    <div class="switcher-main-item-font"><span>任务</span></div>
+                </div>
+                <div class="switcher-main-item item-point">
+                    <div class="switcher-main-item-icon"><i class="mdui-icon material-icons">&#xe8d3;</i></div>
+                    <div class="switcher-main-item-font"><span>协作者</span></div>
+                </div>
+                <div class="switcher-main-item item-list">
+                    <div class="switcher-main-item-icon"><i class="mdui-icon material-icons">&#xe03b;</i></div>
+                    <div class="switcher-main-item-font"><span>个人清单</span></div>
+                </div>
+                <div class="switcher-main-item"></div>  
+                <div class="switcher-main-item"></div>
+            </div>
+
+            <!-- 用于侧边栏底部，用于进行登出、个人信息设置等操作 -->
+            <div class="switcher-footer"></div>
+        </div>
+
+
+        <!-- 功能侧边栏 -->
+        <div class="sidebar">
+           <div class="sidebar-box sidebar-task">
+                <!-- 功能侧边栏 loading -->
+                <div id="sidebar_loading">
+                    <div class="cube1"></div>
+                    <div class="cube2"></div>
+                </div>
+
+                <!-- 顶部，任务搜索与任务创建按钮存放处 -->
+                <div class="sidebar-task-header">
+                    <button class="mdui-btn mdui-btn-icon mdui-ripple" id="creatTaskBtn"><i class="mdui-icon material-icons">add</i></button>
+                    <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">     
+                        <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons search-icon">search</i></button>
+                        <input class="mdui-textfield-input task-search" type="text" placeholder="查询任务ID"/>
+                        <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons cancel-icon">close</i></button>
+                    </div>
+                </div>
+                
+                <!-- 任务栏任务项创建 div 模板 -->
+                <!-- <div class="sidebar-task-item"></div> -->
+           </div>
+
+           <!-- 任务点 -->
+           <div class="sidebar-box sidebar-point">
+                <!-- 任务点列表 - 单个渲染模板 -->
+                <!-- <div class="sidebar-point-item"></div> -->
+           </div>
+
+           <!-- 备忘录 -->
+           <div class="sidebar-box sidebar-list"></div>
+        </div>
+
+
+        <!-- 功能展示栏 -->
+        <div class="main">
+            <div class="main-welcome">
+                <div class="main-welcome-text">
+                    <h1>E.Task</h1>
+                    <h3>404 we found</h3>
+                </div>
+            </div>
+
+
+            <!-- 任务功能的具体展示 -->
+            <div class="main-task">
+                <!-- 任务创建面板 -->
+                <div class="main-task-create">
+                    <div class="main-task-create-name">
+                        <h2>创建任务</h2>
+                        <input type="text" id="taskName" placeholder="请创建任务名...">
+                    </div>
+                    <div class="main-task-create-mark">
+                        <h2 class="main-task-creat-title">这是个什么任务呢？</h2>
+                        <div contenteditable="true" id="taskMark">简单描述下即可...</div>
+                    </div>
+                    <div class="main-task-create-time">
+                        <h2 class="main-task-creat-title">约定个期限</h2>
+                        <label for="#task_begin_time">from</label>
+                        <input type="date" id="task_begin_time">
+                        <label for="#task_end_tiem">to</label>
+                        <input type="date" id="task_end_time"> 
+                    </div>
+                    <div class="main-task-create-btn"><span>创建任务</span></div>
+                </div>
+            </div>
+
+            <!-- 任务节点展示 -->
+            <div class="main-point">
+                <div class="main-point-box">
+
+                    <!-- 任务进度点模板 -->
+                    <!-- <div class="point-left"></div>
+                    <div class="point-right"></div> -->
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="../script/main.js" ></script>
+</body>
+</html>

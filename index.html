@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+
+
+
+
+
+    <div class="login-page " id="login_page">
+        <div class="login-box ">
+            <div class="login-logo"></div>
+            <div class="login-title">
+                <span>登录</span>
+            </div>
+            <div class="login-input">
+                <input  id="login_username" class="sign-input" type="text" placeholder="请输入电话号码">
+                <span class="input-border border-left"></span>
+                <span class="input-border border-top"></span>
+                <span class="input-border border-bottom"></span>
+                <span class="input-border border-right"></span>
+            </div>
+            <div class="login-input" >
+                <input id="login_password" class="sign-input" type="password" placeholder="请输入密码">
+                <span class="input-border border-left"></span>
+                <span class="input-border border-top"></span>
+                <span class="input-border border-bottom"></span>
+                <span class="input-border border-right"></span>
+            </div>
+            <div class="mdui-ripple login-button">
+                <span>欢迎使用E.Task</span>
+            </div>
+            <div class="change-tip login-change">
+                <span>去注册 >></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sign-page ">
+        <div class="sign-box ">
+            <div class="sign-title">
+                <span>注&nbsp;册</span>
+            </div>
+            <div class="sign-usermessage" >
+                <i class="mdui-icon material-icons">&#xe918;</i>
+                <label  class="no-focus" for="sign_company">所在公司或学校</label>
+                <input class="sign-input" type="text" id="sign_company">
+                <span class="sign-input-bottom"></span>
+            </div>
+            <div class="sign-usermessage" >
+                <i class="mdui-icon material-icons">&#xe853;</i>
+                <label  class="no-focus" for="sign_name">姓名</label>
+                <input class="sign-input" type="text" id="sign_name">
+                <span class="sign-input-bottom"></span>
+            </div>
+            <div class="sign-usermessage" >
+                <i class="mdui-icon material-icons">&#xe325;</i>
+                <label  class="no-focus" for="sign_username">个人电话(10~14位)</label>
+                <input class="sign-input" type="text" id="sign_username">
+                <span class="sign-input-bottom"></span>
+            </div>
+            <div class="sign-usermessage" >
+                <i class="mdui-icon material-icons">&#xe32a;</i>
+                <label  class="no-focus" for="sign_password">密码</label>
+                <input class="sign-input" type="password" id="sign_password">
+                <span class="sign-input-bottom"></span>
+            </div>
+            <div class="sign-button mdui-ripple mdui-btn-raised">注册</div>
+            <div class="change-tip sign-change">
+                <span>去登陆 >></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script/index.js"></script>
+</body>
+</html>

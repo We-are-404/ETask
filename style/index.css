@@ -1,0 +1,356 @@
+/* 公共选择器样式 */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body,html{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.hide-page{
+    display: none;
+}
+
+.page{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 20%;
+    display: block !important;
+}
+
+/* 登录注册切换按钮的公共样式 */
+.change-tip{
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* 登录页面样式 */
+.login-page{
+    display: flex;
+    background-color: #282c34;
+    transition: all .3s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+
+    
+}
+
+.login-box{
+    background-color: #282c34;
+    width: 20%;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+.login-logo{
+    height: 60px;
+    width: 60px;
+    position: relative;
+    margin: auto;
+    background-image: url('../static/img/logo192.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    animation: logoani 2s linear infinite;
+    margin-bottom: 50px;
+}
+
+@keyframes logoani {
+    
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.login-title {
+    height: 30px;
+    width: 100%;
+    position: relative;
+    background-color: #282c34;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: #61dafb;
+    font-weight: 300;
+    letter-spacing: 17px;
+    box-sizing: border-box;
+    padding-left: 20px; 
+}
+
+
+.login-input {
+    width: 100%;
+    height: 30px;
+    background-color: #282c34;
+    margin-top: 20px;  
+    position: relative;
+}
+
+.login-input input {
+    background-color: #282c34;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    outline: none;
+    border: none;
+    caret-color: #61dafb;
+    box-sizing: border-box;
+    padding-left: 7px;
+    color: #61dafb;
+}
+
+.login-input input::placeholder{
+    color: rgba(97, 218, 251, 0.3);
+}
+
+
+/* 登录页的输入框特效 */
+.input-border{
+    content: block;
+    background-color: #61dafb;
+    position: absolute;
+    transition: transform .1s ease-in-out;
+}
+
+.border-left, .border-right{
+    width: 2px;
+    top: 0px;
+    bottom: 0px;
+    transform: scaleY(0);
+}
+
+.border-top, .border-bottom{
+    height: 2px;
+    left: 0;
+    right: 0px;
+}
+
+.border-left{
+    left: 0;
+    transform-origin: bottom center;
+    transition-delay: .2s;
+    
+}
+.border-top{
+    top: 0;
+    transform-origin: left center;
+    transition-delay: .1s;
+    transform: scaleX(0);
+}
+.border-right{
+    right: 0;
+    transform-origin: top center;
+
+}
+.border-bottom{
+    bottom: 0;
+    transform-origin: right center;
+}
+
+.login-input input:focus ~ .border-bottom{
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+.login-input input:focus ~ .border-top{
+    transform: scaleX(1);
+    transform-origin: right center;
+}
+
+.login-input input:focus ~ .border-right{
+    transform: scaleY(1);
+    transform-origin: bottom center;
+}
+
+.login-input input:focus ~ .border-left{
+    transform: scaleY(1);
+    transform-origin: top center;
+}
+/* /登录页输入框特效 */
+
+
+.login-button{
+    height: 40px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #61dafb;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.login-change{
+    color: #61dafb;
+}
+
+
+
+/* 注册页面样式 */
+.sign-page{
+    background-color: white;
+    display: none;
+    transition: all 10s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sign-box{
+    background-color: white;
+    width: 20%;
+    display: none;
+    transition: all .7s ease-in-out;
+
+}
+.sign-title{
+    position: relative;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    color: #4fc08d;
+    font-size: 20px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+
+/* 注册框原始状态 */
+
+.material-icons{
+    position: absolute;
+    font-size: 20px;
+    top: 27px;
+    left: -25px;
+    color: #4fc08d;
+    opacity: .4;
+}
+
+.sign-usermessage{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin: 25px 0px;
+    /* background-color: #61dafb; */
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.sign-usermessage input {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    bottom: 0;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    color: #4fc08d;
+}
+
+.sign-usermessage label{
+    position: absolute;
+    transition: all .5s ease-in-out;
+    top: 25px;
+    z-index: 1;
+}
+
+.sign-usermessage .no-focus{
+    font-size: 20px;
+    left: 7px;
+    color: #4fc08d;
+    opacity: 0.4;
+   
+    cursor: pointer;
+}
+
+.sign-input-bottom{
+    height: 1.5px;
+    position: absolute;
+    bottom: 0px;
+    background-color: #4fc08d;
+    left: 0px;
+    right: 0px;
+    opacity: 0.6;
+
+}
+
+
+/* 注册框悬停状态 */
+.sign-usermessage:hover .sign-input-bottom {
+    height: 2px;
+    opacity: 1;
+}
+
+/* 注册框聚焦状态 */
+.focus-bottom {
+    opacity: 1;
+    height: 2px;
+}
+
+.focus-icon {
+    opacity: 1;
+}
+
+.focus-label{
+    font-size: 10px;
+    opacity: 1;
+    top: 10px !important;
+    color: #4fc08d;
+
+}
+
+/* 注册按钮 */
+.sign-button{
+    height: 40px;
+    position: relative;
+    width: 90%;
+    background-color: #4fc08d;
+    text-align: center;
+    color: white;
+    margin: auto;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.sign-change{
+    color: #4fc08d;
+}
